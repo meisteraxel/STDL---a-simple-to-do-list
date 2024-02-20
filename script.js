@@ -11,19 +11,41 @@ function addTask() {
   const inputText = taskInput.value;
   const weekday = document.getElementById("weekdayDropdown").value;
 
-  if (weekday === "Monday") {
-    mondayTasks.innerHTML += `<li class="list-group-item">${inputText}</li>`;
-  } else if (weekday === "Tuesday") {
-    tuesdayTasks.innerHTML += `<li class="list-group-item">${inputText}</li>`;
-  } else if (weekday === "Wednesday") {
-    wednesdayTasks.innerHTML += `<li class="list-group-item">${inputText}</li>`;
-  } else if (weekday === "Thursday") {
-    thursdayTasks.innerHTML += `<li class="list-group-item">${inputText}</li>`;
-  } else if (weekday === "Friday") {
-    fridayTasks.innerHTML += `<li class="list-group-item">${inputText}</li>`;
-  } else if (weekday === "Saturday") {
-    saturdayTasks.innerHTML += `<li class="list-group-item">${inputText}</li>`;
-  } else if (weekday === "Sunday") {
-    sundayTasks.innerHTML += `<li class="list-group-item">${inputText}</li>`;
+  // Ein neues <li>-Element erstellen
+  const newTask = document.createElement("li");
+  newTask.className = "list-group-item";
+  newTask.textContent = inputText;
+
+  // Event-Listener hinzufügen, um das <li>-Element zu entfernen, wenn darauf geklickt wird
+  newTask.addEventListener("click", function () {
+    this.parentNode.removeChild(this);
+  });
+
+  // Das <li>-Element zur entsprechenden Liste hinzufügen
+  switch (weekday) {
+    case "Monday":
+      mondayTasks.appendChild(newTask);
+      break;
+    case "Tuesday":
+      tuesdayTasks.appendChild(newTask);
+      break;
+    case "Wednesday":
+      wednesdayTasks.appendChild(newTask);
+      break;
+    case "Thursday":
+      thursdayTasks.appendChild(newTask);
+      break;
+    case "Friday":
+      fridayTasks.appendChild(newTask);
+      break;
+    case "Saturday":
+      saturdayTasks.appendChild(newTask);
+      break;
+    case "Sunday":
+      sundayTasks.appendChild(newTask);
+      break;
   }
+
+  // Eingabefeld leeren
+  taskInput.value = "";
 }
