@@ -58,3 +58,7 @@ section {
     background-color: #EDEDED;
     border-radius: 10px;
 }
+
+li {
+    cursor: pointer;
+}
