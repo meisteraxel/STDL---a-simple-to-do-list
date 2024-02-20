@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <title>STDL</title>
+  </head>
+  <body>
+    <nav>
+      <h1>STDL</h1>
+      <p>...just a simple To-Do List</p>
+    </nav>
+    <main>
+      <section class="input-container">
+        <input
+          type="text"
+          id="task-input"
+          name="task-input"
+          placeholder="What needs to be done?"
+        />
+        <div class="btn-container">
+          <select name="weekdayDropdown" id="weekdayDropdown" required>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+          <button type="button" onclick="addTask()">Add Task</button>
+        </div>
+      </section>
+      <section class="weekdays-container">
+        <div class="day-container">
+          <h2>Monday</h2>
+          <ul id="monday-tasklist">
+          </ul>
+        </div>
+        <div class="day-container">
+          <h2>Tuesday</h2>
+          <ul id="tuesday-tasklist"></ul>
+        </div>
+        <div class="day-container">
+          <h2>Wednesday</h2>
+          <ul id="wednesday-tasklist"></ul>
+        </div>
+        <div class="day-container">
+          <h2>Thursday</h2>
+          <ul id="thursday-tasklist"></ul>
+        </div>
+        <div class="day-container">
+          <h2>Friday</h2>
+          <ul id="friday-tasklist"></ul>
+        </div>
+        <div class="day-container">
+          <h2>Saturday</h2>
+          <ul id="saturday-tasklist"></ul>
+        </div>
+        <div class="day-container">
+          <h2>Sunday</h2>
+          <ul id="sunday-tasklist"></ul>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
