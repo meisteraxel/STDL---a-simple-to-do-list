@@ -8,6 +8,11 @@
 
 body {
   font-family: "Roboto Mono", monospace;
+  overflow: hidden;
+}
+
+button, select {
+  font-family: "Roboto Mono", monospace;
 }
 
 nav {
@@ -15,12 +20,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 30px;
-  background-color: #000;
+  background-color: black;
   color: #f9f9f9;
 }
 
 section {
-    padding: 20px;
+  padding: 20px;
 }
 
 .input-container {
@@ -30,14 +35,52 @@ section {
 #task-input {
   width: 50%;
   height: 150px;
-  background-color: #EDEDED;
-  border: none;
+  border: 1px solid #ededed;
   border-radius: 10px;
   padding: 50px;
+  text-align: center;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#task-input:hover {
+  border: 1px solid black;
+}
+
+.task-btn {
+  width: 150px;
+  height: 35px;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  background-color: black;
+  color: #ededed;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.task-btn:hover {
+  background-color: #ededed;
+  color: black;
+  border: 1px solid black;
+}
+
+#weekdayDropdown {
+  background-color: black;
+  padding: 0px 10px;
+  text-align: center;
+  color: #fff;
+  width: 220px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+option {
+  height: 50px;
 }
 
 .btn-container {
   display: flex;
+  gap: 30px;
   width: 50%;
   flex-direction: column;
   align-items: center;
@@ -49,16 +92,34 @@ section {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 10px;
+  justify-content: center;
+  align-items: start;
+  justify-items: center;
 }
 
 .day-container {
-    min-height: 600px;
-    text-align: center;
-    padding: 20px 50px;
-    background-color: #EDEDED;
-    border-radius: 10px;
+  min-height: 600px;
+  text-align: center;
+  padding: 20px 50px;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.day-container:hover {
+  border: 1px solid black;
+}
+
+.day-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style-type: none;
 }
 
 li {
-    cursor: pointer;
+  cursor: pointer;
+  padding: 10px;
 }

@@ -11,6 +11,7 @@ function addTask() {
   const inputText = taskInput.value;
   const weekday = document.getElementById("weekdayDropdown").value;
 
+  // Überprüfen ob Task eingegeben wurde
   if (inputText === "") {
     return;
   }
