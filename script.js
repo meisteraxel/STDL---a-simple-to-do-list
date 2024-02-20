@@ -11,6 +11,10 @@ function addTask() {
   const inputText = taskInput.value;
   const weekday = document.getElementById("weekdayDropdown").value;
 
+  if (inputText === "") {
+    return;
+  }
+
   // Ein neues <li>-Element erstellen
   const newTask = document.createElement("li");
   newTask.className = "list-group-item";
